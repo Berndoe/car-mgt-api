@@ -7,18 +7,27 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="CloudinaryDotNet" Version="1.27.4" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.2" />
+        <PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.2" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2"/>
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Data\" />
-      <Folder Include="Interfaces\" />
       <Folder Include="Logs\" />
       <Folder Include="Migrations\" />
-      <Folder Include="Models\Domain\" />
-      <Folder Include="Models\DTO\" />
-      <Folder Include="Services\" />
-      <Folder Include="Templates\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Templates\RegisterationEmail.html">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Templates\ServicingReminderEmail.cs">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Compile>
     </ItemGroup>
 
 </Project>
