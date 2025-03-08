@@ -1,6 +1,8 @@
+using CarManagementAPI.Interfaces;
+
 namespace CarManagementAPI.Services;
 
-public class CarService
+public class CarService : ICarService
 {
     
 }
